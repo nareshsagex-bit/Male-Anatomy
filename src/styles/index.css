@@ -1,0 +1,56 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Playfair Display", Georgia, serif;
+  --font-label: "Rajdhani", "Barlow", system-ui, sans-serif;
+  --font-sans: "Inter", system-ui, sans-serif;
+
+  --color-accent: #e8322b;
+  --color-accent-soft: #fdecea;
+  --color-ink: #1d2230;
+  --color-muted: #7a8090;
+  --color-line: #eceef2;
+  --color-page: #f3f4f7;
+  --color-card: #ffffff;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--color-page);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Spaced uppercase label used throughout the dashboard. */
+.label {
+  font-family: var(--font-label);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+}
+
+.card {
+  background: var(--color-card);
+  border-radius: 14px;
+  box-shadow: 0 1px 2px rgb(20 24 40 / 0.04), 0 8px 24px rgb(20 24 40 / 0.05);
+}
+
+.scroll-thin {
+  scrollbar-width: thin;
+  scrollbar-color: #d9dce3 transparent;
+}
+
+@keyframes pulse-dot {
+  0%, 100% { opacity: 0.25; }
+  50% { opacity: 1; }
+}
+.pulse-dot {
+  animation: pulse-dot 1.2s ease-in-out infinite;
+}
